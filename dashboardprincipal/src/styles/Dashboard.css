@@ -1,0 +1,93 @@
+
+.dashboard-container {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px;
+  text-align: center;
+  /*background-color: #f4f4f9;*/
+  min-height: 80;
+  background-image: url('/public/fondo.jpeg'); /* Ruta a la imagen en public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 40px;
+  color: #041427fa;
+}
+
+.header p {
+  font-size: 25px;
+  color: #3d3904;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  display: center;
+  grid-auto-flow: dense;
+}
+
+.card {
+  background-color: #ffffff73;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.card img {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.dashboard-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #50460e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #a07145;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* En pantallas pequeñas, 2 por fila */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr); /* En móviles, 1 por fila */
+  }
+}
